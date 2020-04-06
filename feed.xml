@@ -1,4 +1,174 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-06T15:22:49-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://datadote.github.io/blog/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://datadote.github.io/blog/jupyter/2020/02/20/test</id><content type="html" xml:base="https://datadote.github.io/blog/jupyter/2020/02/20/test.html">&lt;!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-06T15:23:56-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch1_ans</title><link href="https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans.html" rel="alternate" type="text/html" title="Fastbook_ch1_ans" /><published>2020-03-25T00:00:00-05:00</published><updated>2020-03-25T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans.html">&lt;h1 id=&quot;chapter-1-answers-to-questions&quot;&gt;Chapter 1 Answers to questions&lt;/h1&gt;
+
+&lt;p&gt;1) Do you need these for deep learning?
+Lots of math T / F
+Lots of data T / F
+Lots of expensive computers T / F
+A PhD T / F&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;FFFF&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;2) Name five areas where deep learning is now the best in the world.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Vision, NLP, robotics, image generation, playing games, recommendation systems&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;3) What was the name of the first device that was based on the principle of the artificial neuron?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The Mark I Perceptron&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;4) Based on the book of the same name, what are the requirements for “Parallel Distributed Processing”?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Needs the following: set of processing units, a state of activation, an output function for each unit, a pattern of connectivity among units, a propagation rule for propagating patterns of activity through the network of connectivities, an activation rule to combine inputs, a learning rule where patterns of connectivity are modified by experience, an environment within which the system must operate&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;?? 5) What were the two theoretical misunderstandings that held back the field of neural networks?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Marvin Minsky showing 1 layer of NN couldn’t perform some math functions (eg XOR)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;6) What is a GPU?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Graphics processing unit, good for matrix multiplication&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;7) Open a notebook and execute a cell containing: 1+1. What happens?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Prints out 2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;8) Follow through each cell of the stripped version of the notebook for this chapter. Before executing each cell, guess what will happen&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Done&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;9) Complete the Jupyter Notebook online appendix.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Done&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;10) Why is it hard to use a traditional computer program to recognize images in a photo?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;You have to write out rules explicitly. To recognize images would take an unreasonable amount of rules.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;11) What did Samuel mean by “Weight Assignment”?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Each processing unit has a weight associated with it. This weight is updated through training.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;12) What term do we normally use in deep learning for what Samuel called “Weights”?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;model parameters&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;13) Draw a picture that summarizes Arthur Samuel’s view of a machine learning model&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Done&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;14) Why is it hard to understand why a deep learning model makes a particular prediction?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Model learns from data, and does not explain the rules explicitly&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;15) What is the name of the theorem that a neural network can solve any mathematical problem to any level of accuracy?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Universal Approximation Theorm&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;16) What do you need in order to train a model?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Data&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;17) How could a feedback loop impact the rollout of a predictive policing model?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Positive feedback increasing a bias. Examples include predictive models for arrests or collaborative filtering for youtube videos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;18) Do we always have to use 224x224 pixel images with the cat recognition model?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Historical reasons on imagenet&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;19) What is the difference between classification and regression?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Classification has discrete outputs. Linear regression has continuous outputs&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;20) What is a validation set? What is a test set? Why do we need them?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Validation set is a portion of the dataset set aside for the human to evaluate performance. It is not used for training, but for evaluation of the training&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;21) What will fastai do if you don’t provide a validation set?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Fastai will automatically make a validation set based off 20% of your training data&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;22) Can we always use a random sample for a validation set? Why or why not?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;No, because there is a chance the validation set does not represent the actual use case. An example is time series forecasting, we want to predict the future given the past. If our training data contains data in the future of the validation set, then there is data leakage.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;23) What is overfitting? Provide an example.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Overfitting is when the model memorizes pictures, and does not learn general features. An indicator of overfitting is when there is a large difference between the training and validation loss. An example might be a car dataset where the model sees a lot of Toyota cars, but can’t tell Honda cars are cars as well. Maybe the model learned to associate cars with the Toyota logo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;24) What is a metric? How does it differ to “loss”?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A metric is a performance indicator for humans to understand. A loss is a performance indicator for models to use in order to train, and adjust weights.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;25) How can pretrained models help?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Pretrained models help by leveraging knowledge learned on other tasks. An example is image classification. Models trained on ImageNet learn low level features such as edges, textures, gradients, and can transfer this learned knowledge. Small datasets might not have enough data to let untrained models learn these low level features.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;26) What is the “head” of a model?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The head of a model is a smaller neural network added to the last layer of a pretrained model. This head is trainable, and fine-tuned to the applicable dataset.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;27) What kinds of features do the early layers of a CNN find? How about the later layers?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Early layers of a CNN learn low level features such as edges, lines, textures, gradients. Later layers combine the low level features, and contain more complex features such as shapes, text, faces.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;28) Are image models only useful for photos?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;No, image models can used for other types of data as well. The caveat is the other types of data must be converted into images at some point. One example is speech. Speech spectrograms can be turned into pictures, and then fed into a model.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;29) What is an “architecture”?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;An architecture is the skeleton of a neural network. This architecture includes the number of layers, number of weights, pattern of connections, and activation functions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;30) What is segmentation?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Segmentation is the act of semantically classifying every pixel of an image.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;31) What is y_range used for? When do we need it?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;y_range is used to indicate continuous variables for tabular data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;32) What are “hyperparameters”?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Hyperparameters are parameters set by the human, and not learned by the model training. Examples of hyperparameters are the learning rate, activation functions, number of layers, number of weights to use. An example of not a parameter, but not a hyperparameter, are the weights of the neural network neurons. These weights are learned through training.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;33) What’s the best way to avoid failures when using AI in an organization?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Best way to avoid failures is to understand the importance of validation and test sets. Validation sets are used to verify the training performance. If the validation sets are used too often, there is a chance to overfit to the validation set. As a result, a test set is used to “double check” a model’s performance. A test set should be used seldomly to avoid overfitting to the test set.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">Chapter 1 Answers to questions</summary></entry><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://datadote.github.io/blog/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://datadote.github.io/blog/jupyter/2020/02/20/test</id><content type="html" xml:base="https://datadote.github.io/blog/jupyter/2020/02/20/test.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
