@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-06T15:23:56-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch1_ans</title><link href="https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans.html" rel="alternate" type="text/html" title="Fastbook_ch1_ans" /><published>2020-03-25T00:00:00-05:00</published><updated>2020-03-25T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans.html">&lt;h1 id=&quot;chapter-1-answers-to-questions&quot;&gt;Chapter 1 Answers to questions&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-06T15:26:25-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch2_ans</title><link href="https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans.html" rel="alternate" type="text/html" title="Fastbook_ch2_ans" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans.html">&lt;h1 id=&quot;chapter-2-answers-to-questions&quot;&gt;Chapter 2 answers to questions&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Provide an example of where the bear classification model might work poorly, due to structural or style differences to the training data.
+    &lt;blockquote&gt;
+      &lt;p&gt;Night time where the lighting is darker and images are more grayscale&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Where do text models currently have a major deficiency?
+    &lt;blockquote&gt;
+      &lt;p&gt;Text models can mimic text well, but don’t seem to understand what they are mimicing. Text models are not good at generating correct responses&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are possible negative societal implications of text generation models?
+    &lt;blockquote&gt;
+      &lt;p&gt;Biases can be built into these models. These text models could be used for online trolling or spreading misinfromation on social media&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In situations where a model might make mistakes, and those mistakes could be harmful, what is a good alternative to automating a process?
+    &lt;blockquote&gt;
+      &lt;p&gt;Add a human into the process to check the model’s predictions&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What kind of tabular data is deep learning particularly good at?
+    &lt;blockquote&gt;
+      &lt;p&gt;Text, eg titles, reviews, comments&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What’s a key downside of directly using a deep learning model for recommendation systems?
+    &lt;blockquote&gt;
+      &lt;p&gt;Deep learning models are predictors, not recommenders. So, the models look at your history, and find similar items. Rather than try to push your boundaries a little to see if you might like something new&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the steps of the Drivetrain approach?
+    &lt;blockquote&gt;
+      &lt;p&gt;1) Define objective 2) Figure out the levers 3) Get data 4) Use the data to model how the objective changes using the available levers&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How do the steps of the Drivetrain approach map to a recommendation system?
+The Drivetrain approach is a methodology to create actionable outcomes from data, and not just predictions.
+1) Want more sales through recommendations
+2) Rank the recommendations
+3) Run experiments to see if new recommendations cause new sales
+4) Compare new model with existing/baseline model to see if changes caused more sales from recommendations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create an image recognition model using data you curate, and deploy it on the web.
+    &lt;blockquote&gt;
+      &lt;p&gt;Done&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is &lt;code class=&quot;highlighter-rouge&quot;&gt;DataLoaders&lt;/code&gt;?
+    &lt;blockquote&gt;
+      &lt;p&gt;A dataloaders is a collection of dataloader objects from the FASTAI library
+A dataloader object contains information on how to retrieve the data (paths, names, labels, splits)&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What four things do we need to tell fastai to create &lt;code class=&quot;highlighter-rouge&quot;&gt;DataLoaders&lt;/code&gt;?
+1) What kind of data we are working with
+2) How to get the list of items
+3) How to label these images
+4) How to create a validation set&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does the &lt;code class=&quot;highlighter-rouge&quot;&gt;splitter&lt;/code&gt; parameter to &lt;code class=&quot;highlighter-rouge&quot;&gt;DataBlock&lt;/code&gt; do?
+    &lt;blockquote&gt;
+      &lt;p&gt;Splitter tells the dataloaders function how to split the data into training and validation sets&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How do we ensure a random split always gives the same validation set?
+    &lt;blockquote&gt;
+      &lt;p&gt;Pass a seed=### argument into the RandomSplitter. Use the same seed number each time&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What letters are often used to signify the independent and dependent variables?
+    &lt;blockquote&gt;
+      &lt;p&gt;Independent = x
+Dependent = y&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What’s the difference between crop, pad, and squish resize approaches? When might you choose one over the other?
+    &lt;blockquote&gt;
+      &lt;p&gt;Crop takes a centered crop of the image
+Pad adds 0’s to the perimeter of images if the images are too small (black borders)
+Squish squeezes an image into the specified size. &lt;em&gt;Distorts image&lt;/em&gt;
+If the images are always centered, crop is ok. If you want the whole image without any changes, and have different sizes, then padding works. Use squish if you need faster compute, and the application actually has similar distortions.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is data augmentation? Why is it needed?
+    &lt;blockquote&gt;
+      &lt;p&gt;Data augmentation is when you add transforms (change contrast, brightness, rotate, skew, flip, etc.) to images. Data augmentation is used when the training data is small, which seems to be the case for all image data sets.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;item_tfms&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;batch_tfms&lt;/code&gt;?
+    &lt;blockquote&gt;
+      &lt;p&gt;Item_tfms does transformations on a per item basis, and is usually just used for resizing images. Item_tfms works before batch_tfms
+Batch_tfms applies transforms on a batch at a time. As a result, it assumes the inputs are all the same shape
+item_tfms and batch_tfms are arguments for the DataLoader class&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is a confusion matrix?
+    &lt;blockquote&gt;
+      &lt;p&gt;A confusion matrix is a table showing correct/wrong predictions, as well as false positives and false negatives. On the table, the y&amp;gt;axis are the actual labels. On the x&amp;gt;axis are the model predictions. Given a table x,y point, that point represents the number of times the actual label, and predicted label happened together. The diagonal of the table represents when the actual label and predicted label were the same.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does &lt;code class=&quot;highlighter-rouge&quot;&gt;export&lt;/code&gt; save?
+    &lt;blockquote&gt;
+      &lt;p&gt;Export saves a ‘.pkl’ file. This file contains the model architecture, parameters, and also 
+the definition of how to create the dataloaders&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is it called when we use a model for getting predictions, instead of training?
+    &lt;blockquote&gt;
+      &lt;p&gt;Inference&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are IPython widgets?
+    &lt;blockquote&gt;
+      &lt;p&gt;Software that allows you to use JavaScript and Python in a web browser&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;When might you want to use CPU for deployment? When might GPU be better?
+    &lt;blockquote&gt;
+      &lt;p&gt;Use CPU for deployment when the user experience is adequate. CPU is generally cheaper. May want a GPU if you get enough traffic, and are able to batch together jobs&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the downsides of deploying your app to a server, instead of to a client (or edge) device such as a phone or PC?
+    &lt;blockquote&gt;
+      &lt;p&gt;Deploying to your server means you have to maintain the hardware, and also the scaling burden is on you. On a phone, it is horizontal scaling and the client “takes” the scaling cost&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are 3 examples of problems that could occur when rolling out a bear warning system in practice?
+    &lt;blockquote&gt;
+      &lt;p&gt;1) Out of domain data, 2) Domain shift
+Examples of “out of domain data” are low resolution photos, night time photos, latency between prediction and response to user&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is “out of domain data”?
+    &lt;blockquote&gt;
+      &lt;p&gt;Input data that has a distribution a lot different than the training data distribution&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is “domain shift”?
+    &lt;blockquote&gt;
+      &lt;p&gt;Domain shift is when your input data distribution changes, and moves away from the original training data distribution&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What are the 3 steps in the deployment process?
+1) Manual process, run models in parallel and check outputs by hand
+2) Limited scope deployment, try the model in the wild for a limited time/area and supervise the performance
+3) Gradual expansion, expand the scope. This will require a good reporting system in order to get debugging information if things go wrong. For example, out of domain data or domain shift.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For a project you’re interested in applying deep learning to, consider the thought experiment “what would happen if it went really, really well?”
+    &lt;blockquote&gt;
+      &lt;p&gt;Done&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Start a blog, and write your first blog post. For instance, write about what you think deep learning might be useful for in a domain you’re interested in.
+    &lt;blockquote&gt;
+      &lt;p&gt;Done. Thinking about an invasive flower classifier.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Furthur research&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Consider how the Drivetrain approach maps to a project or problem you’re interested in.
+    &lt;blockquote&gt;
+      &lt;p&gt;I think the approach let’s you understand how different parts interact&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;When might it be best to avoid certain types of data augmentation?
+    &lt;blockquote&gt;
+      &lt;p&gt;When the data augmentation transforms images to look like another image label. For example, on MNIST, you do not want to do a horizontal flip because a b and d could look the same. Another example are numbers where you do not want to flip vertically because a 6 and a 9 could look the same&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Chapter 2 answers to questions</summary></entry><entry><title type="html">Fastbook_ch1_ans</title><link href="https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans.html" rel="alternate" type="text/html" title="Fastbook_ch1_ans" /><published>2020-03-25T00:00:00-05:00</published><updated>2020-03-25T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/03/25/fastbook_ch1_ans.html">&lt;h1 id=&quot;chapter-1-answers-to-questions&quot;&gt;Chapter 1 Answers to questions&lt;/h1&gt;
 
 &lt;p&gt;1) Do you need these for deep learning?
 Lots of math T / F
