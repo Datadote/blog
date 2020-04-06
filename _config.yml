@@ -38,7 +38,7 @@ baseurl: "/blog" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
-  social_links: "https://www.linkedin.com/in/dnylam/"
+  social_links:
     twitter: 
     github: "datadote"
 
