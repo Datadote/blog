@@ -1,4 +1,207 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-06T19:59:59-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch3_ans</title><link href="https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans.html" rel="alternate" type="text/html" title="Fastbook_ch3_ans" /><published>2020-04-06T00:00:00-05:00</published><updated>2020-04-06T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans.html">&lt;ol&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-07T17:26:03-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch4_ans</title><link href="https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans.html" rel="alternate" type="text/html" title="Fastbook_ch4_ans" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans.html">&lt;ol&gt;
+  &lt;li&gt;How is a greyscale image represented on a computer? How about a color image?
+    &lt;blockquote&gt;
+      &lt;p&gt;For greyscale, 1 number indicating range from white to black
+For color, 3 numbers indicating intensity of red, green, blue&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How are the files and folders in the &lt;code class=&quot;highlighter-rouge&quot;&gt;MNIST_SAMPLE&lt;/code&gt; dataset structured? Why?
+    &lt;blockquote&gt;
+      &lt;p&gt;Structured similar to imagenet
+Main folder -&amp;gt; valid, train
+valid,train -&amp;gt; separate folders for each category&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Explain how the “pixel similarity” approach to classifying digits works.
+    &lt;blockquote&gt;
+      &lt;p&gt;Pixel similarity is where you find the ideal number by averaging all the images of the “number”, then you take the mean absolute difference or mean squared difference between your input and the ideal image&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is a list comprehension? Create one now that selects odd numbers from a list and doubles them.
+    &lt;blockquote&gt;
+      &lt;p&gt;List comprehension is a fast way to create a list from an iterator
+a = [x for x in range(10)]; [2*x for x in a if x%2 &amp;gt; 0]&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is a “rank 3 tensor”?
+    &lt;blockquote&gt;
+      &lt;p&gt;a tensor with 3 dimensions&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the difference between tensor rank and shape? How do you get the rank from the shape?
+    &lt;blockquote&gt;
+      &lt;p&gt;shape gives you information on how big each axis is. Rank is length(shape)&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are RMSE and L1 norm?
+    &lt;blockquote&gt;
+      &lt;p&gt;RMSE and L1 norm are methods to measure difference between two things. RMSE stands for root mean squared error. L1 norm is the mean absolute difference.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How can you apply a calculation on thousands of numbers at once, many thousands of times faster than a Python loop?
+    &lt;blockquote&gt;
+      &lt;p&gt;Vectorize the calculations, and then use a gpu&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create a 3x3 tensor or array containing the numbers from 1 to 9. Double it. Select the bottom right 4 numbers.
+    &lt;blockquote&gt;
+      &lt;p&gt;a = (torch.tensor(range(9))*2).view(3,3); a[1:3, 1:3]&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is broadcasting?
+    &lt;blockquote&gt;
+      &lt;p&gt;broadcasting is when a math operation happens between two inputs with different shapes (usually 1 dimension), and the smaller shape automatically becomes the shape of the larger shape&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Are metrics generally calculated using the training set, or the validation set? Why?
+    &lt;blockquote&gt;
+      &lt;p&gt;validation set in order to make sure model is generalizing and not overfitting&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is SGD?
+    &lt;blockquote&gt;
+      &lt;p&gt;SGD stands for stochastic gradient descent, and is a method to optimize neural network weights.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why does SGD use mini batches?
+    &lt;blockquote&gt;
+      &lt;p&gt;Speeds up training, rather than going 1 example at a time&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the 7 steps in SGD for machine learning?
+    &lt;blockquote&gt;
+      &lt;p&gt;Initialize parameters, forward prop, calculate loss, backprop, update weights, repeat, stop&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How do we initialize the weights in a model?
+    &lt;blockquote&gt;
+      &lt;p&gt;Randomly. Although with certain activations, there are certain statistics we use with the random initialization. Eg ReLU -&amp;gt; he intialization&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is “loss”?
+    &lt;blockquote&gt;
+      &lt;p&gt;loss is a measure the algorithm uses to optimize itself&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why can’t we always use a high learning rate?
+    &lt;blockquote&gt;
+      &lt;p&gt;a high learning rate could cause the loss to increase after each update&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is a “gradient”?
+    &lt;blockquote&gt;
+      &lt;p&gt;gradient is the slope of a function at a point&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Do you need to know how to calculate gradients yourself?
+    &lt;blockquote&gt;
+      &lt;p&gt;If you use a framework, no. PyTorch does it for you&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why can’t we use accuracy as a loss function?
+    &lt;blockquote&gt;
+      &lt;p&gt;Accuracy is not fine-grain enough. Most gradients would be close to 0, and the updating would be slow&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Draw the sigmoid function. What is special about its shape?
+    &lt;blockquote&gt;
+      &lt;p&gt;Goes between 0 and 1. 1/(1+exp(-x)). Crosses 0.5 at x=0&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the difference between loss and metric?
+    &lt;blockquote&gt;
+      &lt;p&gt;Loss is the measure the algorithm uses to evaluate performance. Metric is what humans use.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the function to calculate new weights using a learning rate?
+    &lt;blockquote&gt;
+      &lt;p&gt;w = w - lr&lt;em&gt;params.grad, or params.data -= lr&lt;/em&gt;params.grad&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does the &lt;code class=&quot;highlighter-rouge&quot;&gt;DataLoader&lt;/code&gt; class do?
+    &lt;blockquote&gt;
+      &lt;p&gt;dataloader takes a list of tuples of (x,y), and batches/shuffles them for your model&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Write pseudo-code showing the basic steps taken each epoch for SGD.
+    &lt;blockquote&gt;
+      &lt;p&gt;forward prop, calc loss, backprop, update weight
+pred = model(x)
+loss = loss_func(pred, y)
+loss.backward()
+p -= p.grad*lr
+p.grad.zero_()&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create a function which, if passed two arguments &lt;code class=&quot;highlighter-rouge&quot;&gt;[1,2,3,4]&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;'abcd'&lt;/code&gt;, returns &lt;code class=&quot;highlighter-rouge&quot;&gt;[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]&lt;/code&gt;. What is special about that output data structure?
+    &lt;blockquote&gt;
+      &lt;p&gt;[x for x in zip([1,2,3,4], ‘abcd’)]&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does &lt;code class=&quot;highlighter-rouge&quot;&gt;view&lt;/code&gt; do in PyTorch?
+    &lt;blockquote&gt;
+      &lt;p&gt;view does reshaping&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the “bias” parameters in a neural network? Why do we need them?
+    &lt;blockquote&gt;
+      &lt;p&gt;bias parameters are randomly initialized parameters used in the forward prop equation. y = w*x + b. B lets the equation center itself.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does the &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt; operator do in python?
+    &lt;blockquote&gt;
+      &lt;p&gt;@ = np.matmul = element-wise matrix multiplication&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does the &lt;code class=&quot;highlighter-rouge&quot;&gt;backward&lt;/code&gt; method do?
+    &lt;blockquote&gt;
+      &lt;p&gt;backward calculates the gradients from the given point
+eg loss.backward()&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why do we have to zero the gradients?
+    &lt;blockquote&gt;
+      &lt;p&gt;so that the update is reflective of the current step, and not of previous steps
+loss.backward() accumulates gradients in each function&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What information do we have to pass to &lt;code class=&quot;highlighter-rouge&quot;&gt;Learner&lt;/code&gt;?
+    &lt;blockquote&gt;
+      &lt;p&gt;Learner(dls, net, metrics)
+Learner(dls, net, opt_func, loss_func, metrics)&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Show python or pseudo-code for the basic steps of a training loop.
+    &lt;blockquote&gt;
+      &lt;p&gt;for i in range(epochs):
+for xb,yb in dl:
+calc_grad(xb, yb, model)
+p.data -= p.grad.data*lr
+p.grad.zero_()&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is “ReLU”? Draw a plot of it for values from &lt;code class=&quot;highlighter-rouge&quot;&gt;-2&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;+2&lt;/code&gt;.
+    &lt;blockquote&gt;
+      &lt;p&gt;relu(x) = max(x,0). Relu is 0 for x 0 or less, and = x for x &amp;gt; 0&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is an “activation function”?
+    &lt;blockquote&gt;
+      &lt;p&gt;activation function is a nonlinearity applied to the linear y=wx+b equation&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What’s the difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;F.relu&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nn.ReLU&lt;/code&gt;?
+    &lt;blockquote&gt;
+      &lt;p&gt;F.relu is the function.
+nn.Relu is a PyTorch module (layer) that does the same thing.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The universal approximation theorem shows that any function can be approximated as closely as needed using just one nonlinearity. So why do we normally use more?
+    &lt;blockquote&gt;
+      &lt;p&gt;We use more nonlinearities, which means more layers, for better performance. For the same performance, deeper networks tend to need less memory/calculations.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">How is a greyscale image represented on a computer? How about a color image? For greyscale, 1 number indicating range from white to black For color, 3 numbers indicating intensity of red, green, blue</summary></entry><entry><title type="html">Fastbook_ch3_ans</title><link href="https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans.html" rel="alternate" type="text/html" title="Fastbook_ch3_ans" /><published>2020-04-06T00:00:00-05:00</published><updated>2020-04-06T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans.html">&lt;ol&gt;
   &lt;li&gt;Does ethics provide a list of “right answers”?
     &lt;blockquote&gt;
       &lt;p&gt;There is no list of right answers for ethics&lt;/p&gt;
