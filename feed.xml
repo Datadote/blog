@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-06T16:06:04-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch2_ans</title><link href="https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans.html" rel="alternate" type="text/html" title="Fastbook_ch2_ans" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans.html">&lt;h1 id=&quot;chapter-2-answers-to-questions&quot;&gt;Chapter 2 answers to questions&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-06T19:59:59-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch3_ans</title><link href="https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans.html" rel="alternate" type="text/html" title="Fastbook_ch3_ans" /><published>2020-04-06T00:00:00-05:00</published><updated>2020-04-06T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/06/fastbook_ch3_ans.html">&lt;ol&gt;
+  &lt;li&gt;Does ethics provide a list of “right answers”?
+    &lt;blockquote&gt;
+      &lt;p&gt;There is no list of right answers for ethics&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How can working with people of different backgrounds help when considering ethical questions?
+    &lt;blockquote&gt;
+      &lt;p&gt;Provide different viewpoints on how an application will affect people&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What was the role of IBM in Nazi Germany? Why did the company participate as they did? Why did the workers participate?
+    &lt;blockquote&gt;
+      &lt;p&gt;IBM provided equipment and technical assistance to classify prisoners. Company participated for money. Workers did not know better.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What was the role of the first person jailed in the VW diesel scandal?
+    &lt;blockquote&gt;
+      &lt;p&gt;Engineer who just did what manager told him to do.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What was the problem with a database of suspected gang members maintained by California law enforcement officials?
+    &lt;blockquote&gt;
+      &lt;p&gt;The database had many errors, but had no easy means of fixing the errors. The errors included 42 babies added to database then they were less than 1 year old. 28 of these babies were marked as admitting to being gang members.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why did YouTube’s recommendation algorithm recommend videos of partially clothed children to pedophiles, even although no employee at Google programmed this feature?
+    &lt;blockquote&gt;
+      &lt;p&gt;The algorithm optimized itself to maximize viewer time.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the problems with the centrality of metrics?
+    &lt;blockquote&gt;
+      &lt;p&gt;Centrality of metrics, to the extreme, mean one metric is being optimized. Algorithms will try to optimize the metric without thinking about negative consequences.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why did Meetup.com not include gender in their recommendation system for tech meetups?
+    &lt;blockquote&gt;
+      &lt;p&gt;More men than women were interested in tech meetups. If the recommendation system included gender, it might have increased this bias, and have a positive feedback loop. Recommend more to men, recommend less to women.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the six types of bias in machine learning, according to Suresh and Guttag?
+    &lt;blockquote&gt;
+      &lt;p&gt;Historical bias, representation bias, measurement bias, evaluation bias, aggregation bias, deployment bias&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Give two examples of historical race bias in the US
+    &lt;blockquote&gt;
+      &lt;p&gt;Used car sales, black people offered higher initial prices. Craigslist rental-ads, Black name elicited fewer respones than a white name.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Where are most images in Imagenet from?
+    &lt;blockquote&gt;
+      &lt;p&gt;United States and other Western countries. Eg Great Britain, Itality, Canada, Australia, Spain.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In the paper “Does Machine Learning Automate Moral Hazard and Error” why is sinusitis found to be predictive of a stroke?
+    &lt;blockquote&gt;
+      &lt;p&gt;The data only represented people who had symptoms, went to the hospital, and got diagnosed with a stroke. Based on the data, the prediction was similar to prediction heavy utilization (propensity of people to seek cre) as well as the stroke.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is representation bias?
+    &lt;blockquote&gt;
+      &lt;p&gt;When there is a clear imbalance, a model will find it and amplify it or maintain it. For example in occupations, models tend to predict females as nurses, and males as doctors.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How are machines and people different, in terms of their use for making decisions?
+    &lt;blockquote&gt;
+      &lt;p&gt;Machines can amplify bias with feedback loops very rapidly. Machines are implemented at scale without thinking of potential negative consequences, whereas people are usually screened more before being put into positions of power.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Is disinformation the same as “fake news”?
+    &lt;blockquote&gt;
+      &lt;p&gt;No, disinformation is making people not trust one another by intertwining real and fake news together.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why is disinformation through auto-generated text a particularly significant issue?
+    &lt;blockquote&gt;
+      &lt;p&gt;Auto-generated disinformation scales a lot easier than human trolls. As a result, the amount of disinformation could exponentially increase without much resources.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the five ethical lenses described by the Markkula Center?
+    &lt;blockquote&gt;
+      &lt;p&gt;The Rights Approach: Which option best respects the rights of all who have a stake?
+The Justice Approach: Which option treats people equally or proportionately?
+The Utilitarian Approach: Which option will produce the most good and do the least harm? 
+The Common Good Approach: Which option best serves the community as a whole, and not just some members?
+The Virtue Approach: Which option leads me to act as the sort of person I want to be?&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Where is policy an appropriate tool for addressing data ethics issues?
+    &lt;blockquote&gt;
+      &lt;p&gt;If the data ethics issues are human rights issues, then the law is an appropriate tool.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Does ethics provide a list of “right answers”? There is no list of right answers for ethics</summary></entry><entry><title type="html">Fastbook_ch2_ans</title><link href="https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans.html" rel="alternate" type="text/html" title="Fastbook_ch2_ans" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/03/29/fastbook_ch2_ans.html">&lt;h1 id=&quot;chapter-2-answers-to-questions&quot;&gt;Chapter 2 answers to questions&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Provide an example of where the bear classification model might work poorly, due to structural or style differences to the training data.
