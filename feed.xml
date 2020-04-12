@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-08T00:37:01-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch4_ans</title><link href="https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans.html" rel="alternate" type="text/html" title="Fastbook_ch4_ans" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans.html">&lt;ol&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-12T17:22:42-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch5_ans</title><link href="https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans.html" rel="alternate" type="text/html" title="Fastbook_ch5_ans" /><published>2020-04-12T00:00:00-05:00</published><updated>2020-04-12T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans.html">&lt;h1 id=&quot;chapter-5-answers&quot;&gt;Chapter 5 Answers&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Why do we first resize to a large size on the CPU, and then to a smaller size on the GPU?
+    &lt;blockquote&gt;
+      &lt;p&gt;Resize to large size in order to perform augmentations. This allows margin to do augmentations without creating empty zones. Then resize to smaller size.
+All data augmentations, after item_tfms resize, are performed together on GPU and only have 1 interpolation step.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If you are not familiar with regular expressions, find a regular expression tutorial, and some problem sets, and complete them. Have a look on the book website for suggestions.
+    &lt;blockquote&gt;
+      &lt;p&gt;** Not done&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the two ways in which data is most commonly provided, for most deep learning datasets?
+    &lt;blockquote&gt;
+      &lt;p&gt;Either label in name, or labels are separated as folders. split(train,valid), then folders for each category in each folder&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Look up the documentation for &lt;code class=&quot;highlighter-rouge&quot;&gt;L&lt;/code&gt; and try using a few of the new methods is that it adds.
+    &lt;blockquote&gt;
+      &lt;p&gt;** Not done&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Look up the documentation for the Python pathlib module and try using a few methods of the Path class.
+    &lt;blockquote&gt;
+      &lt;p&gt;Done&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Give two examples of ways that image transformations can degrade the quality of the data.
+    &lt;blockquote&gt;
+      &lt;p&gt;1) Reflection padding artifacts 2) Parts of images being interpolated incorrectly&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What method does fastai provide to view the data in a DataLoader?
+    &lt;blockquote&gt;
+      &lt;p&gt;“.show_batch()”&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What method does fastai provide to help you debug a DataBlock?
+    &lt;blockquote&gt;
+      &lt;p&gt;“.summary() -&amp;gt; datablock.summary(filePath_with_images)”&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Should you hold off on training a model until you have thoroughly cleaned your data?
+    &lt;blockquote&gt;
+      &lt;p&gt;No, you can use your trained model to help you clean your data&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the two pieces that are combined into cross entropy loss in PyTorch?
+    &lt;blockquote&gt;
+      &lt;p&gt;softmax and negative log likelihood
+log_softmax + nll_loss&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the two properties of activations that softmax ensures? Why is this important?
+    &lt;blockquote&gt;
+      &lt;p&gt;softmax ensures probabilities lie between 0-1, and the sum of all the predictions = 1&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;When might you want your activations to not have these two properties?
+    &lt;blockquote&gt;
+      &lt;p&gt;in your loss function because a 0.99 and 0.999 probability might not affect much in gradients even though 0.999 is 10x more confident than 0.99&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Calculate the “exp” and “softmax” columns of «bear_softmax» yourself (i.e. in a spreadsheet, with a calculator, or in a notebook).
+    &lt;blockquote&gt;
+      &lt;p&gt;Done&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why can’t we use torch.where to create a loss function for datasets where our label can have more than two categories?
+    &lt;blockquote&gt;
+      &lt;p&gt;torch.where finds true/false scenarios. While you could have a lot of torch.where statements, it is not as efficient as doing softmax&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the value of log(-2)? Why?
+    &lt;blockquote&gt;
+      &lt;p&gt;nan or undefined because log is not defined for numbers less than or equal to 0&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are two good rules of thumb for picking a learning rate from the learning rate finder?
+    &lt;blockquote&gt;
+      &lt;p&gt;Use either 10x less than the min, or use where the loss downward slope is steepest&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What two steps does the fine_tune method do?
+    &lt;blockquote&gt;
+      &lt;p&gt;fit_one_cycle on just the head, then unfreeze all with discriminative learning rates, and fit_one_cycle&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In Jupyter notebook, how do you get the source code for a method or function?
+    &lt;blockquote&gt;
+      &lt;p&gt;?? before or after a function, eg ??learn.fine_tune or learn.fine_tune??&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are discriminative learning rates?
+    &lt;blockquote&gt;
+      &lt;p&gt;each layer has a different learning rate. You are discriminating learning rates among the layers&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How is a Python slice object interpreted when past as a learning rate to fastai?
+    &lt;blockquote&gt;
+      &lt;p&gt;slice(1e-6, 1e-4). First argument goes to shallowest layer. Last argument goes to deepest layer. Layers in between get a multiplicative equidistant value.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why is early stopping a poor choice when using one cycle training?
+    &lt;blockquote&gt;
+      &lt;p&gt;With 1cycle training, there is a chance that early stopping picks a model before the 1cycle learning rate reaches small values. So, perhaps the accuracy lowers, increase a little, and then goes lower towards the end&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the difference between resnet 50 and resnet101?
+    &lt;blockquote&gt;
+      &lt;p&gt;resnet101 has 51 more layers than resnet50&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does to_fp16 do?
+    &lt;blockquote&gt;
+      &lt;p&gt;Enables calculations to use less precise numbers where possible during training
+Speeds up training, and reduces memory load&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Chapter 5 Answers</summary></entry><entry><title type="html">Fastbook_ch4_ans</title><link href="https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans.html" rel="alternate" type="text/html" title="Fastbook_ch4_ans" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/07/fastbook_ch4_ans.html">&lt;ol&gt;
   &lt;li&gt;How is a greyscale image represented on a computer? How about a color image?
     &lt;blockquote&gt;
       &lt;p&gt;For greyscale, 1 number indicating range from white to black
