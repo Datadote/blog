@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-12T17:22:42-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch5_ans</title><link href="https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans.html" rel="alternate" type="text/html" title="Fastbook_ch5_ans" /><published>2020-04-12T00:00:00-05:00</published><updated>2020-04-12T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans.html">&lt;h1 id=&quot;chapter-5-answers&quot;&gt;Chapter 5 Answers&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://datadote.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datadote.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-25T13:13:02-05:00</updated><id>https://datadote.github.io/blog/feed.xml</id><title type="html">Deep Learning Tidbits</title><subtitle>This blog is a collection of useful knowledge learned along the deep learning journey.</subtitle><entry><title type="html">Fastbook_ch6_ans</title><link href="https://datadote.github.io/blog/2020/04/25/fastbook_ch6_ans.html" rel="alternate" type="text/html" title="Fastbook_ch6_ans" /><published>2020-04-25T00:00:00-05:00</published><updated>2020-04-25T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/25/fastbook_ch6_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/25/fastbook_ch6_ans.html">&lt;h1 id=&quot;chapter-6-answers&quot;&gt;Chapter 6 Answers&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;how could multi-label classification improve the usability of the bear classifier?
+    &lt;blockquote&gt;
+      &lt;p&gt;It could predict when there is no bear present, and not only restrict to the 3 classes&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How do we encode the dependent variable in a multi-label classification problem?
+    &lt;blockquote&gt;
+      &lt;p&gt;One hot encoding with MultiCategoryBlock&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How do you access the rows and columns of a DataFrame as if it was a matrix?
+    &lt;blockquote&gt;
+      &lt;p&gt;df.iloc[r,c]&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How do you get a column by name from a DataFrame?
+    &lt;blockquote&gt;
+      &lt;p&gt;df.column or df[‘column’]&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the difference between a dataset and DataLoader?
+    &lt;blockquote&gt;
+      &lt;p&gt;a dataset is a list of x,y tuples. A dataloader takes a dataset and creates + shuffles mini-batches&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does a Datasets object normally contain?
+    &lt;blockquote&gt;
+      &lt;p&gt;a list with 2 lists. One list is of the x input, and the other list contains the y inputs&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does a DataLoaders object normally contain?
+    &lt;blockquote&gt;
+      &lt;p&gt;List of Minibatch lists of (x,y) tuples&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What does lambda do in Python?
+    &lt;blockquote&gt;
+      &lt;p&gt;Shorthand way to create functions on the fly&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What are the methods to customise how the independent and dependent variables are created with the data block API?
+    &lt;blockquote&gt;
+      &lt;p&gt;get_x, get_y. You put in your functions base on what the dataloader input data is (eg image path vs df)&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why is softmax not an appropriate output activation function when using a one hot encoded target?
+    &lt;blockquote&gt;
+      &lt;p&gt;Softmax tries to maximize one output. If we have multiple labels/targets, then softmax might push labels out&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why is nll_loss not an appropriate loss function when using a one hot encoded target?
+    &lt;blockquote&gt;
+      &lt;p&gt;nll_loss is for single label datasets where that target is labeled as a single integer and not one-hot encoded&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;nn.BCELoss&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nn.BCEWithLogitsLoss&lt;/code&gt;?
+    &lt;blockquote&gt;
+      &lt;p&gt;first one does not do a sigmoid. Second one performs a sigmoid on the activations.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why can’t we use regular accuracy in a multi-label problem?
+    &lt;blockquote&gt;
+      &lt;p&gt;accuracy used predictions from the highest class, and only had 1 output. Whereas, multi-label probles have multiple outputs, and we need to check the accuracy for each class separately
+we will separately sigmoid each class, threshold, and then compare to target labels&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;When is it okay to tune an hyper-parameter on the validation set?
+    &lt;blockquote&gt;
+      &lt;p&gt;when the validation set accuracy sweep curve is flat -&amp;gt; generalizes&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How is &lt;code class=&quot;highlighter-rouge&quot;&gt;y_range&lt;/code&gt; implemented in fastai? (See if you can implement it yourself and test it without peaking!)
+    &lt;blockquote&gt;
+      &lt;p&gt;y_range gives you the min and max range. Sigmoid squishes input between 0 and 1.
+Now, you just need to change the range -&amp;gt; sigmoid(x)&lt;em&gt;(max-min)
+Recenter -&amp;gt; sigmoid(x)&lt;/em&gt;(max-min) + min&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is a regression problem? What loss function should you use for such a problem?
+    &lt;blockquote&gt;
+      &lt;p&gt;a regression problem is where the labels/targets are continuous variables. Use absolute difference or mean squared loss&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What do you need to do to make sure the fastai library applies the same data augmentation to your inputs images and your target point coordinates?
+    &lt;blockquote&gt;
+      &lt;p&gt;Inside datatablock -&amp;gt; blocks=(ImageBlock, PointBlock) , Pointblock lets FA know the labels are coordinates, and to perform the same augmentation as the image&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Chapter 6 Answers</summary></entry><entry><title type="html">Fastbook_ch5_ans</title><link href="https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans.html" rel="alternate" type="text/html" title="Fastbook_ch5_ans" /><published>2020-04-12T00:00:00-05:00</published><updated>2020-04-12T00:00:00-05:00</updated><id>https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans</id><content type="html" xml:base="https://datadote.github.io/blog/2020/04/12/fastbook_ch5_ans.html">&lt;h1 id=&quot;chapter-5-answers&quot;&gt;Chapter 5 Answers&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Why do we first resize to a large size on the CPU, and then to a smaller size on the GPU?
