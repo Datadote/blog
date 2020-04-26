@@ -1,0 +1,88 @@
+<h1 id="chapter-7-answers">Chapter 7 Answers</h1>
+
+<ol>
+  <li>What is the difference between ImageNet and Imagenette? When is it better to experiment on one versus the other?
+    <blockquote>
+      <p>Imagenet original is a dataset with ~1.3M images and 1000 classes. Imagenette is a much smaller subset of 10 distinct classes</p>
+    </blockquote>
+  </li>
+  <li>What is normalization?
+    <blockquote>
+      <p>Normalization is the process of making the data input have 0 mean and std 1</p>
+    </blockquote>
+  </li>
+  <li>Why didn’t we have to care about normalization when using a pretrained model?
+    <blockquote>
+      <p>If no Normalization.from_stats() is passed to batch_tfms, FA calculates 
+the stats from a single batch of your data</p>
+    </blockquote>
+  </li>
+  <li>What is progressive resizing?
+    <blockquote>
+      <p>Training on images that gradually increase in size as training progresses.
+For example, first fit_one_cycle on size 128, then fine_tune on 224</p>
+    </blockquote>
+  </li>
+  <li>Implement progressive resizing in your own project. Did it help?
+    <blockquote>
+      <p>*** Did not try</p>
+    </blockquote>
+  </li>
+  <li>What is test time augmentation? How do you use it in fastai?
+    <blockquote>
+      <p>TTA is when you data augment test images, and average the predictions
+In FA, do learn.tta(n=4)</p>
+    </blockquote>
+  </li>
+  <li>Is using TTA at inference slower or faster than regular inference? Why?
+    <blockquote>
+      <p>Slower, because we need each additional image needs an inference as well</p>
+    </blockquote>
+  </li>
+  <li>What is Mixup? How do you use it in fastai?
+    <blockquote>
+      <p>Mixup is when you mixup images by adding weighted versions together.
+This means the image pixels are added together. Weighted labels are added together as well
+Implemented in fa2 by adding a callback into the learner
+You will also want to use the LabelSmoothingCrossEntropy loss func
+Example: cnn_learner(dls, …, cbs = MixUp(), loss_func=LabelSmoothingCrossEntropy())</p>
+    </blockquote>
+  </li>
+  <li>Why does Mixup prevent the model from being too confident?
+    <blockquote>
+      <p>Because it allows the model to optimize predictions to values between 0, and 1. Instead of always forcing to 0/1</p>
+    </blockquote>
+  </li>
+  <li>Why does a training with Mixup for 5 epochs end up worse than a training without Mixup?
+    <blockquote>
+      <p>It is harder to see what’s in a MixUp image. Also, now it needs to predict continuous numbers instead of a 1/0</p>
+    </blockquote>
+  </li>
+  <li>What is the idea behind label smoothing?
+    <blockquote>
+      <p>If there are mislabels in your dataset, trying to optimize to 1/0 predictions can be harmful. 
+Encourage model to be less confident by having labels between 1/0, and then adding a little “epsilon” error to every other prediction
+Example for one hot-encoded -&gt; [0, 1, 0, 0] -&gt; [0.1, 0.7, 0.1, 0.1]</p>
+    </blockquote>
+  </li>
+  <li>What problems in your data can label smoothing help with?
+    <blockquote>
+      <p>Mislabeled data or harder to label data. I think label smoothing can
+give a higher fidelity to data if you start adding in prediction + confidence level
+For example [0, 1, 0, 0] -&gt; [0, 0.9, 0, 0] -&gt; Do you care if all sum to 1? Or 
+just that they are constrainted between 0 and 1 (a range)</p>
+    </blockquote>
+  </li>
+  <li>When using label smoothing with 5 categories, what is the target associated with the index 1?
+    <blockquote>
+      <p>1 - epsilon + epsilon/N -&gt; where N = 5</p>
+    </blockquote>
+  </li>
+  <li>What is the first step to take when you want to prototype quick experiments on a new dataset.
+    <blockquote>
+      <p>If the dataset is large, find a smaller subset that is representative of the whole. This will let you try experiments much faster. Key is finding smallest 
+dataset that is representative and able to discriminate between techniques
+For example, Imagenet (1000 classes) -&gt; Imagenette (10 classes)</p>
+    </blockquote>
+  </li>
+</ol>
