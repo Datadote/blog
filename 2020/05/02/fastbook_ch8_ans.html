@@ -1,0 +1,162 @@
+<h1 id="chapter-8-answers">Chapter 8 Answers</h1>
+
+<ol>
+  <li>What problem does collaborative filtering solve?
+    <blockquote>
+      <p>Bring recommendations to users</p>
+    </blockquote>
+  </li>
+  <li>How does it solve it?
+    <blockquote>
+      <p>Create an embedding vector for users and items, and then compare vector distances</p>
+    </blockquote>
+  </li>
+  <li>Why might a collaborative filtering predictive model fail to be a very useful recommendation system?
+    <blockquote>
+      <p>If there is a positive feedback loop that reinforces a small group. For example, anime watchers watch a lot of anime, and the recommender may bias towards anime</p>
+    </blockquote>
+  </li>
+  <li>What does a crosstab representation of collaborative filtering data look like?
+    <blockquote>
+      <p>Left side y axis represents users+user_embeddings, x axis represents items+item_embeddings. The cross section represents the dependent variable</p>
+    </blockquote>
+  </li>
+  <li>Write the code to create a crosstab representation of the MovieLens data (you might need to do some web searching!)
+    <blockquote>
+      <p>*** Not done</p>
+    </blockquote>
+  </li>
+  <li>What is a latent factor? Why is it “latent”?
+    <blockquote>
+      <p>Latent factor are indirect variables, not directly observed, but seen through a combination of other variables. Latent means hidden or concealed</p>
+    </blockquote>
+  </li>
+  <li>What is a dot product? Calculate a dot product manually using pure python with lists.
+    <blockquote>
+      <p>Dot product is the element wise multiplication of two vectors, and then summing all the products</p>
+    </blockquote>
+  </li>
+  <li>What does <code class="highlighter-rouge">pandas.DataFrame.merge</code> do?
+    <blockquote>
+      <p>Combines data frames together along, and aligns data with a specific column</p>
+    </blockquote>
+  </li>
+  <li>What is an embedding matrix?
+    <blockquote>
+      <p>Embedding matrix is a matrix of users/items and latent factors</p>
+    </blockquote>
+  </li>
+  <li>What is the relationship between an embedding and a matrix of one-hot encoded vectors?
+    <blockquote>
+      <p>You use the one-hot encoded vector to pull the embeddings of 1 user. You can think of an embedding as a compressed version of the one-hot encoded vectors</p>
+    </blockquote>
+  </li>
+  <li>Why do we need <code class="highlighter-rouge">Embedding</code> if we could use one-hot encoded vectors for the same thing?
+    <blockquote>
+      <p>Embeddings save a lot more memory especially if the there is high cardinality. Also, embeddings allow turning categories into continuous variables</p>
+    </blockquote>
+  </li>
+  <li>What does an embedding contain before we start training (assuming we’re not using a prertained model)?
+    <blockquote>
+      <p>Randomly initialized numbers</p>
+    </blockquote>
+  </li>
+  <li>Create a class (without peeking, if possible!) and use it.
+    <blockquote>
+      <p>*** Not done</p>
+    </blockquote>
+  </li>
+  <li>What does <code class="highlighter-rouge">x[:,0]</code> return?
+    <blockquote>
+      <p>Every row of column 0 (first column)</p>
+    </blockquote>
+  </li>
+  <li>Rewrite the <code class="highlighter-rouge">DotProduct</code> class (without peeking, if possible!) and train a model with it
+    <blockquote>
+      <p>*** Not done</p>
+    </blockquote>
+  </li>
+  <li>What is a good loss function to use for MovieLens? Why?
+    <blockquote>
+      <p>Mean squared error because we have a range of values (1,2,3,4,5)</p>
+    </blockquote>
+  </li>
+  <li>What would happen if we used <code class="highlighter-rouge">CrossEntropy</code> loss with MovieLens? How would we need to change the model?
+    <blockquote>
+      <p>??? It wouldn’t work because it looks for a 1 or 0. You need to do categorical cross entropy</p>
+    </blockquote>
+  </li>
+  <li>What is the use of bias in a dot product model?
+    <blockquote>
+      <p>The bias centers the function in order to balance with other neurons</p>
+    </blockquote>
+  </li>
+  <li>What is another name for weight decay?
+    <blockquote>
+      <p>L2 regularization</p>
+    </blockquote>
+  </li>
+  <li>Write the equation for weight decay (without peeking!)
+    <blockquote>
+      <p>total_loss = loss + sum(wd*(w**2))</p>
+    </blockquote>
+  </li>
+  <li>Write the equation for the gradient of weight decay. Why does it help reduce weights?
+    <blockquote>
+      <p>weight = weight - lr<em>grad
+grad = grad + 2</em>weight
+weight = weight - lr<em>(grad + 2</em>weight)
+weight = (1-2<em>lr)</em>weight - lr*grad</p>
+    </blockquote>
+  </li>
+  <li>Why does reducing weights lead to better generalization?
+    <blockquote>
+      <p>More neurons/weights are used, and therefore have to share features among themselves versus just 1 weight</p>
+    </blockquote>
+  </li>
+  <li>What does <code class="highlighter-rouge">argsort</code> do in PyTorch?
+    <blockquote>
+      <p>argsort gives you the indices of the sorted values</p>
+    </blockquote>
+  </li>
+  <li>Does sorting the movie biases give the same result as averaging overall movie ratings by movie? Why / why not?
+    <blockquote>
+      <p>No, sorting the movie biases gives additional information that given a movie, the people who like that genre, may not like that movie. Whereas the overall movie rating just gives the average across people</p>
+    </blockquote>
+  </li>
+  <li>How do you print the names and details of the layers in a model?
+    <blockquote>
+      <p>layer.model</p>
+    </blockquote>
+  </li>
+  <li>What is the “bootstrapping problem” in collaborative filtering?
+    <blockquote>
+      <p>How to recommend things to new users who have no previous history. You can’t bootstrap them to previous knowledge, because you don’t have any</p>
+    </blockquote>
+  </li>
+  <li>How could you deal with the bootstrapping problem for new users? For new movies?
+    <blockquote>
+      <p>Start people at the average, or ask questions, or get meta data</p>
+    </blockquote>
+  </li>
+  <li>How can feedback loops impact collaborative filtering systems?
+    <blockquote>
+      <p>They could impact systems negatively if there is a reinforcing bias</p>
+    </blockquote>
+  </li>
+  <li>When using a neural network in collaborative filtering, why can we have different number of factors for movie and user?
+    <blockquote>
+      <p>Each represent different complexities. We will flatten, and concatenate all these features before feeding into the neural network</p>
+    </blockquote>
+  </li>
+  <li>Why is there a <code class="highlighter-rouge">nn.Sequential</code> in the <code class="highlighter-rouge">CollabNN</code> model?
+    <blockquote>
+      <p>To create a small NN model</p>
+    </blockquote>
+  </li>
+  <li>What kind of model should be use if we want to add metadata about users and items, or information such as date and time, to a collaborative filter model?
+    <blockquote>
+      <p>EmbeddingNN, which inherits from TabularModel</p>
+    </blockquote>
+  </li>
+</ol>
